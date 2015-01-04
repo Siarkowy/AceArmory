@@ -1,0 +1,104 @@
+#header {
+  background-color: #222;
+}
+
+#header .page-header {
+  border: none;
+  color: white;
+}
+
+#content {
+  background-color: white;
+  margin-bottom: 12pt;
+}
+
+#footer {
+  color: gray;
+  background-color: #222;
+  padding: 6pt 0;
+}
+
+td ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.icon {
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+.filelist {
+  column-count: 4;
+  -moz-column-count: 4;
+  list-style-type: none;
+}
+
+.filelist input {
+  vertical-align: top;
+}
+
+.itemlink:hover {
+  text-decoration: none;
+}
+
+.itemlink img,
+.itemlink span {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.itemlist {
+  -moz-column-count: 2;
+  -moz-column-gap: 3pt;
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.itemlist li {
+  margin-bottom: 3pt;
+  height: 38px;
+}
+
+.itemlist li:hover {
+  background-color: #eee;
+}
+
+.itemlist li.better {
+  background-color: rgba(63, 255, 63, 0.3);
+}
+
+.itemlist li.worse {
+  background-color: rgba(255, 63, 63, 0.3);
+}
+
+.itemlist li a {
+  display: block;
+}
+
+/* item rarity styles */
+
+.rarity0 { color: #9d9d9d !important } /* Poor */
+.rarity1 { color: #ffffff !important; text-shadow: black 1px 1px 2px } /* Common */
+.rarity2 { color: #1eff00 !important } /* Uncommon */
+.rarity3 { color: #0080ff !important } /* Rare */
+.rarity4 { color: #b048f8 !important } /* Epic */
+.rarity5 { color: #ff8000 !important } /* Legendary */
+
+@media (min-width: 768px) {
+  html {
+    position: relative;
+    min-height: 100%;
+  }
+
+  body {
+    padding-bottom: 26pt;
+  }
+
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
