@@ -1,7 +1,5 @@
 <?php // AceArmory (c) 2015 by Siarkowy. All rights reserved. See LICENSE for licensing info.
 
-error_reporting(E_NONE);
-
 include './config.php';
 $dbh = new PDO('sqlite:' . DATABASE_PATH) or die('Could not open item database.');
 
