@@ -45,34 +45,12 @@ switch ($action)
 
     case 'delete':
     {
-        if (is_array($_GET['sheet']))
-        {
-            foreach ($_GET['sheet'] as $value)
-                if ($file = basename(realpath(SHEETS_DIR_PATH . $value . '.xml')))
-                    if (!unlink(SHEETS_DIR_PATH . $file))
-                        $errors[] = "Could not delete {$file}.";
-        }
-        else
-        {
-            if ($file = basename(realpath(SHEETS_DIR_PATH . $_GET['sheet'] . '.xml')))
-                if (!unlink(SHEETS_DIR_PATH . $file))
-                    $errors[] = "Could not delete {$file}.";
-        }
         header('Location: ?');
         break;
     }
 
     case 'download':
     {
-        if (isset($_POST['newsheet']) && !empty($_POST['newsheet']))
-        {
-            $newsheet = htmlspecialchars($_POST['newsheet']);
-            $filename = $newsheet . ' ' . date("Y-m-d His");
-            $xml = file_get_contents(CHARSHEET_URL . '?r=' . ARMORY_REALM . '&n=' . $newsheet);
-            file_put_contents(SHEETS_DIR_PATH . $filename . '.xml', $xml);
-            header('Location: ?action=show&amp;sheet=' . urlencode($filename));
-            exit;
-        }
         header('Location: ?');
         break;
     }
