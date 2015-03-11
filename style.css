@@ -50,12 +50,6 @@ td ul {
   vertical-align: middle;
 }
 
-.cols2 {
-  -moz-column-count: 2;
-  -moz-column-gap: 3pt;
-  column-count: 2;
-}
-
 .itemlist li {
   padding: 3px;
   min-height: 46px;
@@ -99,6 +93,12 @@ td ul {
 
   body {
     padding-bottom: 26pt;
+  }
+
+  .cols2 {
+    -moz-column-count: 2;
+    -moz-column-gap: 3pt;
+    column-count: 2;
   }
 
   #footer {
