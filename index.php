@@ -36,23 +36,25 @@ switch ($action)
             if ($char->guild)
                 $title .= " <small>of &lt;{$char->guild}&gt</small>";
 
+            break;
         }
         else
+        {
             header('Location: ?');
-
-        break;
+            exit;
+        }
     }
 
     case 'delete':
     {
         header('Location: ?');
-        break;
+        exit;
     }
 
     case 'download':
     {
         header('Location: ?');
-        break;
+        exit;
     }
 
     default:
