@@ -36,11 +36,13 @@ switch ($action)
             if ($char->guild)
                 $title .= " <small>of &lt;{$char->guild}&gt</small>";
 
+            break;
         }
         else
+        {
             header('Location: ?');
-
-        break;
+            exit;
+        }
     }
 
     case 'delete':
@@ -59,7 +61,7 @@ switch ($action)
                     $errors[] = "Could not delete {$file}.";
         }
         header('Location: ?');
-        break;
+        exit;
     }
 
     case 'download':
@@ -74,7 +76,7 @@ switch ($action)
             exit;
         }
         header('Location: ?');
-        break;
+        exit;
     }
 
     default:
