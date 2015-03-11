@@ -19,13 +19,21 @@
         <div id="header">
             <div class="container">
                 <div class="page-header">
-                    <h1><?= $title ?> <small>AceArmory</small></h1>
+                    <h1><?= $title ?></h1>
                 </div>
             </div>
         </div>
 
         <div id="content">
             <div class="container">
+<?php if (!empty($errors)): ?>
+                <div class="alert alert-danger" role="alert">
+                    <p><strong>Errors encountered:</strong></p>
+<?php foreach($errors as $error): ?>
+                    <p><?= $error ?></p>
+<?php endforeach ?>
+                </div>
+<?php endif ?>
 <?php include($view) ?>
             </div>
         </div>

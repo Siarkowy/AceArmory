@@ -10,6 +10,7 @@
 #content {
   background-color: white;
   margin-bottom: 12pt;
+  padding: 6pt 0;
 }
 
 #footer {
@@ -49,16 +50,15 @@ td ul {
   vertical-align: middle;
 }
 
-.itemlist {
+.cols2 {
   -moz-column-count: 2;
   -moz-column-gap: 3pt;
-  list-style-type: none;
-  margin-left: 0;
+  column-count: 2;
 }
 
 .itemlist li {
-  margin-bottom: 3pt;
-  height: 38px;
+  padding: 3px;
+  min-height: 46px;
 }
 
 .itemlist li:hover {
@@ -71,6 +71,11 @@ td ul {
 
 .itemlist li.worse {
   background-color: rgba(255, 63, 63, 0.3);
+}
+
+.itemlist li.char-header {
+  min-height: auto;
+  text-align: center;
 }
 
 .itemlist li a {
